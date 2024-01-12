@@ -89,6 +89,7 @@ def KRB5():
     exit()
 
 def main():
+    print(f"{YELLOW}\nMay need to run twice{RESET}")
     print(f"{RED}Make sure both Domain and FQDN are within /etc/hosts")
     time.sleep(2)
     print(f"{RED}Read the actual script to see what to do when the ccache is dropped (go to the bottom of the script) {RESET}")
